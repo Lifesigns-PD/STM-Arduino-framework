@@ -1,18 +1,24 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+int a = 10;
+int b = 20;
+const char* SSID = "LSPL20";
+const char* password = "LspL@#20";
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+void wificonnect(){
+  WiFi.begin(SSID,password);
+  Serial.printf("IP: %d",  )
+
+}
+void setup(){
+  Serial.begin(115200);
+  Serial.print("hey Starting STM\n");
+  Serial.printf("a = %d", a);
+  Serial.printf("b:%d",b);
+  Serial.printf("c = %d ",a +b);
+
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
+void loop(){
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
 }
